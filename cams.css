@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=NTR');
+
+
+body {
+    background-color: lightblue;
+    font-size: 1.2em;
+    font-family: 'NTR', sans-serif, cursive !important;
+    padding: 10px 15px;
+}
+
+a {
+  font-size: 1.2em;
+  font-family: 'NTR', sans-serif, cursive !important;
+  padding: 10px 15px;
+
+}
+
+h2 {
+  font-size: 1.2em;
+  font-family: 'NTR', sans-serif, cursive !important;
+  padding: 10px 15px;
+
+}
+
+#cam1 {
+  width: 960px;
+  height: auto;
+}
+#cam2 {
+  width: 960px;
+  height: auto;
+}
+#cam3 {
+  width: 960px;
+  height: auto;
+}
+#cam4 {
+  width: 960px;
+  height: auto;
+}
+#cam5 {
+  width: 960px;
+  height: auto;
+}

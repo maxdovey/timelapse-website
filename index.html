@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Grey Moth Remote Cameras</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <script src="js/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<script>
+
+jQuery.get('GM_DIR01/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera1').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img1.php',
+  success: function(data) {
+    $('#cam1').attr('src', data);
+  }
+});
+
+jQuery.get('GM_DIR02/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera2').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img2.php',
+  success: function(data) {
+    $('#cam2').attr('src', data);
+  }
+});
+
+
+jQuery.get('GM_DIR03/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera3').html(lastLine);
+});
+$.ajax({
+  url: 'latest_img3.php',
+  success: function(data) {
+    $('#cam3').attr('src', data);
+  }
+});
+
+jQuery.get('GM_DIR04/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera4').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img4.php',
+  success: function(data) {
+    $('#cam4').attr('src', data);
+  }
+});
+
+
+jQuery.get('GM_DIR05/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera5').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img5.php',
+  success: function(data) {
+    $('#cam5').attr('src', data);
+  }
+});
+
+</script>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="imgs/logo2.png" </img>
+        </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="header">
+        <img src="imgs/logo2.png" </img>
+      </div>
+        <button class="btn btn-primary" id="menu-toggle">Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="cam1.html" target="_blank">
+              <img id="cam1"> </img>
+              <p> Camera 1</p>
+                <div id="camera1">
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="cam2.html" target="_blank">
+              <img id="cam2"> </img>
+              <p> Camera 2</p>
+                <div id="camera2">
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="cam3.html" target="_blank">
+              <img id="cam3"> </img>
+              <p> Camera 3</p>
+                <div id="camera3">
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="cam4.html" target="_blank">
+              <img id="cam4"> </img>
+              <p> Camera 4</p>
+                <div id="camera4">
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <a href="cam5.html" target="_blank">
+              <img id="cam5"> </img>
+              <p> Camera 5</p>
+                <div id="camera5">
+                </div>
+              </a>
+            </div>
+          </div>
+    <!-- end of the ROW -->
+  </div>
+    <!-- /#container-fluid -->
+</div>
+    <!-- /#page-content-wrapper -->
+
+
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>

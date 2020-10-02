@@ -1,0 +1,118 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+body {
+  overflow-x: hidden;
+  font-family: 'Rajdhani', sans-serif;
+}
+.header {
+  display: inline-block;
+}
+.header img {
+  float: left;
+  width: 50%;
+  height auto;
+}
+
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: #1000ff;
+}
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+.sidebar-heading {
+  max-width: 300px;
+}
+
+.sidebar-heading img {
+  width: 33%
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+.thumbnail {
+  display: block;
+  padding: 6px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out
+}
+
+.thumbnail img {
+  padding: 6px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto
+}
+.thumbnail:hover img {
+  opacity: 0.3;
+}
+
+.thumbnail a>img, .thumbnail>img {
+  margin-right: auto;
+  margin-left: auto
+}
+
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+  border-color: #337ab7
+}
+
+.thumbnail .caption {
+  padding: 9px;
+  color: #333
+}

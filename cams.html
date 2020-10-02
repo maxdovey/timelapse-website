@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="cams.css">
+    <meta charset="utf-8">
+    <title>Webcams</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+ <h2> BATTERSEA 1 </h2>
+<img id="cam1"> </img>
+ <div id="camera1"></div>
+<h2> HAMPTON COURT</h2>
+<img id="cam2"> </img>
+<div id="camera2"> </div>
+<h2> Camera 3</h2>
+<img id="cam3"> </img>
+<div id="camera3"> </div>
+<h2> Camera 4</h2>
+<img id="cam4"> </img>
+<div id="camera4">  </div>
+<h2> BATTERSEA 2 </h2>
+<img id="cam5"> </img>
+<div id="camera5"></div>
+
+
+</body>
+<script>
+
+jQuery.get('GM_DIR01/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera1').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img1.php',
+  success: function(data) {
+    $('#cam1').attr('src', data);
+  }
+});
+
+jQuery.get('GM_DIR02/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera2').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img2.php',
+  success: function(data) {
+    $('#cam2').attr('src', data);
+  }
+});
+
+
+jQuery.get('GM_DIR03/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera3').html(lastLine);
+});
+$.ajax({
+  url: 'latest_img3.php',
+  success: function(data) {
+    $('#cam3').attr('src', data);
+  }
+});
+
+jQuery.get('GM_DIR04/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera4').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img4.php',
+  success: function(data) {
+    $('#cam4').attr('src', data);
+  }
+});
+
+
+jQuery.get('GM_DIR05/log.txt', function(data) {
+   //process text file line by line
+   var lines = data.split("\n");
+   len = lines.length;
+   var lastLine = lines.slice(len-2);
+   console.log(lastLine);
+   $('#camera5').html(lastLine);
+});
+
+$.ajax({
+  url: 'latest_img5.php',
+  success: function(data) {
+    $('#cam5').attr('src', data);
+  }
+});
+
+</script>
+</html>
