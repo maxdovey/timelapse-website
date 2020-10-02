@@ -4,7 +4,7 @@
 * Basic Gallery website using bootstrap css info below
 * GITIGNORE file ignores the Server side ACTION where the GM folders are so you can make changes to the just the front end. 
 * does include filewatching.js that sends email alert if file has not been updated on the server. remember to add password to this file on the server as it will not be allowed to send emails. 
-
+[http://www.greymothtimelapse.com/](http://www.greymothtimelapse.com/)
 
 
 # [Start Bootstrap - Simple Sidebar](https://startbootstrap.com/template-overviews/simple-sidebar/)
